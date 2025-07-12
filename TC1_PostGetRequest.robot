@@ -12,7 +12,7 @@ ${STATUS}         inactive
 *** Test Cases ***
 Create New User Entry
     ${headers}        Create Dictionary    Authorization=Bearer ${AUTH_TOKEN}    Content-Type=application/json
-    ${random_number}  Evaluate  str(int(time.time() * 1000))
+    ${random_number}  Evaluate  str(int(time.time() * 1000))   #creating random name
     ${NAME}           Set Variable    Mike${random_number}
     ${EMAIL}          Set Variable    ${NAME}@gorest.com
     ${body}           Create Dictionary    name=${NAME}    gender=${GENDER}    email=${EMAIL}    status=${STATUS}
