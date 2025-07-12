@@ -14,4 +14,4 @@ Setup Of the Project API Test in Pycharm
 
 Project Structure:
   APITest
-    TC1_PostGetRequest.robot (contains both test cases 1. Vreate user entry and verify that is created is numerical, 2. Verify that the first entry status is either active or Inactive)
+    TC1_PostGetRequest.robot (contains both test cases 1. Create user entry and verify that id created is numerical, 2. Verify that the first entry status is either active or Inactive)
