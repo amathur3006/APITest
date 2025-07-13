@@ -7,7 +7,7 @@ ${BASE_URL}       https://gorest.co.in/public/v2/
 ${AUTH_TOKEN}     d6588d8c51f91e6ce0361179d3d5ea5e8b8c2696317856f92a847185190a4f5f
 ${ENDPOINT}       /users
 ${GENDER}         male
-${STATUS}         inactive
+${STATUS}         active
 
 *** Test Cases ***
 Create New User Entry
@@ -25,7 +25,7 @@ Create New User Entry
     ${is_digit}  Evaluate    str(${id}).isdigit()
     Should Be True    ${is_digit}
 
-Verify User Status
+Verify First User Entry Status is either active or inactive
      ${headers}        Create Dictionary    Authorization=Bearer ${AUTH_TOKEN}    Content-Type=application/json
      Create Session    api    ${BASE_URL}    headers=${headers}
      ${response}       GET On Session   api  ${ENDPOINT}
